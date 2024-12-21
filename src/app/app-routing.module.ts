@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { AboutMEComponent } from './Components/about-me/about-me.component';
+import { SkillComponent } from './Components/skill/skill.component';
+import { CVComponent } from './Components/cv/cv.component';
+import { ProjectsComponent } from './Components/projects/projects.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 const routes: Routes = [
-  // { path:'', redirectTo:'home', pathMatch:'full' },
-  // { path:'home', component:InicioComponent },
-  // { path:'designer', component:DesignerComponent },
-  // { path: 'productos', loadChildren: () => import('./Components/productos/productos.module').then(x => x.ProductosModule) },
-  // { path: 'user', loadChildren: () => import('./Components/Users/user.module').then(x => x.UserModule), canActivate: [AuthGuard] }, // Aplica el guard aquí
-  // { path:'contacto', component:ContactoComponent },
-  // { path: 'compra', loadChildren: () => import('./Components/compras/compras.module').then(m => m.ComprasModule) },
-  // { path: 'admin', loadChildren: () => import('./Components/admin/admin.module').then(m => m.AdminModule), canActivate: [AdminGuard] },
-  // { path: '**', component: NotFoundComponent }
+  {path: '', component: AppComponent},
+  {path:'about', component:AboutMEComponent},
+  {path:'skill',component:SkillComponent},
+  {path:'cv',component:CVComponent},
+  {path:'project',component:ProjectsComponent},
+  {path:'contact',component:ContactComponent}
 ];
 
 @NgModule({
