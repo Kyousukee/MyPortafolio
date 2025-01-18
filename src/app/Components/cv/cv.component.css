@@ -1,6 +1,175 @@
-.full-screen {
-  width: 100%;
-  height: 100vh;
+.timeline {
+  position: relative;
+  padding-left: 40px;
   margin: 0;
-  padding: 0;
+}
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 2px;
+  height: 100%;
+  background-color: #3d00b6;
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 10px; /* Alinea el punto verticalmente con la tarjeta */
+  left: 15px; /* Ajusta para que coincida con la línea */
+  width: 16px;
+  height: 16px;
+  background-color: #3d00b6;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start; /* Cambiar de center a flex-start */
+  justify-content: center;
+  z-index: 1050;
+  padding-top: 100px; /* Espacio desde arriba */
+}
+
+.custom-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  max-width: 500px;
+  width: 100%;
+  z-index: 1060;
+  animation: fadeIn 0.3s ease;
+}
+
+.custom-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.custom-modal-body {
+  font-size: 16px;
+  color: #333;
+}
+
+.custom-modal-footer {
+  text-align: right;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-close {
+  padding: 8px 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Mover desde arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.timeline-content {
+  margin-left: 50px; /* Desplaza el contenido para alinear con el punto */
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardtimeline-content {
+  margin-left: 50px; /* Desplaza el contenido para alinear con el punto */
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.timeline-content .btn {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+  .timeline {
+    padding-left: 50px;
+  }
+
+  .timeline::before {
+    left: 25px;
+  }
+
+  .timeline-icon {
+    left: 20px; /* Ajusta el punto para alinearse con la línea */
+  }
+
+  .timeline-content {
+    margin-left: 60px; /* Desplaza las tarjetas un poco más */
+  }
 }

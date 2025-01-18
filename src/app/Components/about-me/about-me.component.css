@@ -1,6 +1,36 @@
-.full-screen {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+
+ul {
+  list-style-type: none;
+}
+
+fa-icon{
+    font-size: 15px;
+    color: #149ddd;
+    width: 30px;
+    height: 30px;
+    background: #dff3fc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+h3{
+  font-weight: 700;
+    font-size: 26px;
+    color: #1d0252;
+}
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+
+a{
+  text-decoration: none;
 }

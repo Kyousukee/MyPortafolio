@@ -1,3 +1,93 @@
-<div class="full-screen">
-  <p>projects works!</p>
+<div class="bg-primary-subtle py-5" style="margin-top: 100px!important;">
+  <div class="container">
+    <h2 class="mb-4"><strong>Proyectos</strong></h2>
+    <span class="bar-title mb-5"></span>
+    <p class=" mb-5">Aqui puedes ver algunos de mis proyectos, si quieres conocer como es mi trabajo te invito a revisar los links.</p>
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 " data-aos="flip-up" *ngFor="let project of projects;">
+          <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+              <div class="card-header d-flex flex-column " style="height: 300px;width: 100%; ">
+                  <!-- <div id="{{project.id}}-img" class="img-wrap" style="height: 300px;width: 100%;  "
+                      [ngStyle]="{'backgroundImage':'url('+project.images[0].src+')'}">
+                  </div>
+                  <div id="{{project.id}}-link" class="links mt-auto d-flex justify-content-center">
+                      <a *ngFor="let image of project.images;let index=index" href="{{image.src}}" data-gall="project.id"
+                          class="venobox vbox-item" title="{{image.title}}"><i *ngIf="index==0" class="bx bx-zoom-in bx-md"></i></a>
+                      <a href="{{project.url}}"
+                          title="" target="_BLANK"><i class="bx bx-link bx-md"></i></a>
+                  </div> -->
+                  <div id="{{project.id}}-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div
+                        class="carousel-item"
+                        *ngFor="let image of project.images; let i = index"
+                        [ngClass]="{'active': i === 0}">
+                        <img
+                          [src]="image.src"
+                          class="d-block w-100 previewable"
+                          alt="{{image.title}}"
+                          style="height: 300px; object-fit: cover;"
+                          (click)="openModal(image)">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
+                          <h5>{{image.title}}</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#' + project.id + '-carousel'" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#' + project.id + '-carousel'" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal"
+                    tabindex="-1"
+                    *ngIf="isModalOpen"
+                    style="display: block; background-color: rgba(0,0,0,0.8); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1050;">
+                    <div
+                      class="modal-dialog modal-dialog-centered modal-lg"
+                      style="position: relative; margin: auto;">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">{{selectedImage?.title}}</h5>
+                          <button type="button" class="btn-close" (click)="closeModal()"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <img [src]="selectedImage?.src" class="img-fluid" alt="{{selectedImage?.title}}">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+              <div class="card-body">
+                  <h3 class="card-title">{{project.name}}</h3>
+                  <h5 class="card-title"><strong>Tecnologias:</strong> </h5>
+                  <p class="card-text">{{project.technologies}}</p>
+                  <div class="d-flex flex-row justify-content-center">
+                    <div *ngIf="project.codeSourceUrl && project.codeSourceUrl.length">
+                      <ng-container *ngFor="let url of project.codeSourceUrl">
+                        <a href="{{url}}" target="_blank" type="button" class="btn btn-primary btn-sm m-1">Codigos</a>
+                      </ng-container>
+                    </div>
+                      <!-- <a href="{{project.codeSourceUrl}}" target="_blank" target="_blank"
+                          type="button" class="btn btn-primary mr-3">{{'projects.sourceCode' }}</a> -->
+                      <button (click)="detailOnClick(project)" type="button" class="btn btn-primary btn-sm"><span *ngIf="!project.detailIsDisplayed">+</span><span *ngIf="project.detailIsDisplayed">-</span>
+                          Detalle Proyecto</button>
+                  </div>
+                  <div *ngIf="project.detailIsDisplayed" [innerHTML]="project.detail" class="mt-3">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
 </div>
+
+<div id="contact"></div>

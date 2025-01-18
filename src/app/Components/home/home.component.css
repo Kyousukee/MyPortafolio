@@ -23,3 +23,67 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Fondo con imagen */
+.full-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Imagen de perfil */
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Títulos y texto */
+.profile-name {
+  font-size: 4.5rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .profile-title {
+    font-size: 1.2rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-title {
+    font-size: 1rem;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+}
