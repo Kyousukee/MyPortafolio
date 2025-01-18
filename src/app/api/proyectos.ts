@@ -30,7 +30,7 @@ export const projectsEn = [
           },
       ],
       url: "https://play.google.com/store/apps/details?id=team.traveler.teamtraveler",
-      detail: "Una aplicacion que abarca principalmente lo que es un emprendimiento de bordados personalizados, lo cual este emprendimiento cuenta con su propio repertorio de productos lo que se nos hace facil presentar un ecommerce, pero con el plus de que lo usuarios puedes realizar y construir sus propios diseños en las prendas. Todo esto controlado con sus valores y precios.",
+      detail: "Una aplicación diseñada para un emprendimiento de bordados personalizados que combina un catálogo propio de productos con la opción de que los usuarios creen y personalicen sus propios diseños en prendas. La plataforma incluye un sistema de inicio de sesión donde los usuarios pueden gestionar sus preferencias, guardar diseños favoritos y acceder a su perfil para ver su historial de compras. Además, cuenta con una sección administrativa para el emprendimiento, que permite gestionar el catálogo, los pedidos y los precios de manera eficiente, asegurando una experiencia personalizada y organizada tanto para los clientes como para los administradores.",
       codeSourceUrl: ['https://github.com/Kyousukee/BordadosFront','https://github.com/Kyousukee/BordadosBack'],
       detailIsDisplayed: false,
   },
@@ -53,7 +53,7 @@ export const projectsEn = [
           }
       ],
       url: '#portfolio',
-      detail: "Pequeña aplicacion donde se conecta con servicio de valores de monedas como dolar, utm y uf. Se muestra el valor de cada moneda en el listado principal y se puede ver el historial de cambios de cada moneda, como tambien con sus graficos.",
+      detail: "Una aplicación que se conecta a un servicio de valores de monedas, como dólar, UTM y UF, para mostrar sus precios actualizados en un listado principal. Los usuarios pueden acceder al historial de cambios de cada moneda, visualizar gráficos interactivos que reflejan sus fluctuaciones y recibir información detallada. ",
       codeSourceUrl: ['https://github.com/Kyousukee/PruebaTecnica3IT'],
       detailIsDisplayed: false,
   },
@@ -88,7 +88,7 @@ export const projectsEn = [
           },
       ],
       url: '#portfolio',
-      detail: "Aplicacion paras pequeño local de sushi, donde se puede ver los productos disponibles, agregar y comprar sushi. Esto tambien se puede administrar desde la aplicacion,agregar nuevos productos y agregar los precios de los productos.",
+      detail: "Una aplicación diseñada para un pequeño local de sushi que permite a los clientes explorar los productos disponibles, agregar sus selecciones al carrito y realizar compras de manera sencilla. La plataforma incluye una sección administrativa para el negocio, donde se pueden añadir nuevos productos, establecer o modificar precios y gestionar el inventario. Además, permite controlar el estado de los pedidos en tiempo real, facilitando la organización y el seguimiento de las órdenes dentro del local.",
       codeSourceUrl: ['https://github.com/Kyousukee/MrSushi'],
       detailIsDisplayed: false,
   },
@@ -107,7 +107,7 @@ export const projectsEn = [
           }
       ],
       url: 'https://medium.com/zinedine-projects/beautiful-cv-portfolio-72921a198640',
-      detail: "<p> Pagina Web desarrollada para asesorias personalizadas, donde se puede ver todo los servicios que incluye y ofrece la persona responsable. </p>",
+      detail: "<p> Sitio web diseñado para ofrecer asesorías personalizadas, donde se presentan de manera clara y detallada todos los servicios disponibles, destacando las especialidades y experiencia de la persona responsable. </p>",
       codeSourceUrl: ['https://github.com/Kyousukee/PotenciadoradeTalento'],
       detailIsDisplayed: false,
   },
@@ -138,7 +138,7 @@ export const projectsEn = [
           },
       ],
       url: 'https://transfer-riddle-solver.herokuapp.com/index.html',
-      detail: "<p> Aplicacion de punto de venta, donde se puede ver los productos disponibles, agregar y vender productos, proveedor y compra de productos, incluido tambien la compatibilidad con lector codigo de barras. Esto tambien se puede administrar desde la aplicacion todo lo mencionado anteriormente, agregando tambien reportes y control de usuarios. </p>",
+      detail: "<p> Aplicación de punto de venta que permite visualizar los productos disponibles, agregar y vender artículos, gestionar proveedores y realizar compras de inventario, con un control detallado del stock de los productos. La plataforma incluye compatibilidad con lectores de códigos de barras, facilitando el proceso de ventas. Además, ofrece un panel administrativo completo donde se pueden gestionar todos los aspectos mencionados, mantener un control preciso del stock, generar reportes detallados y administrar usuarios, asegurando una gestión eficiente y organizada del negocio.</p>",
       codeSourceUrl: ['https://github.com/Kyousukee/POS','https://github.com/Kyousukee/PosApi'],
       detailIsDisplayed: false,
   },
@@ -153,7 +153,7 @@ export const projectsEn = [
           }
       ],
       url: 'https://transfer-riddle-solver.herokuapp.com/index.html',
-      detail: "<p> Web Api desarrollada con la intencion de controlar los valores de las bencinas de los distintos tipos de bencineras del pais e insertandolas en la base de datos, esto se realizaba haciendo scrapping a pagina de actualizacion de valores de bencinas.. </p>",
+      detail: "<p> Web API desarrollada con el objetivo de monitorear y controlar los valores de las bencinas de distintas estaciones de servicio a nivel nacional, almacenando esta información en una base de datos. El proceso de recolección de datos se realiza mediante técnicas de scraping a páginas de actualización de precios de bencinas, garantizando la obtención de datos actualizados y su correcta inserción en el sistema para su posterior análisis y consulta. </p>",
       codeSourceUrl: ['https://github.com/Kyousukee/ApiBencinasApp'],
       detailIsDisplayed: false,
   }
