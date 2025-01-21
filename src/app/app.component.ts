@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'PortafolioJose';
+  title = 'Portafolio Jose Vergara';
   currentYear:number;
 
   constructor() {
