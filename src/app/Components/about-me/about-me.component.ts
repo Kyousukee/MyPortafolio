@@ -6,7 +6,7 @@ import AOS from 'aos';
   styleUrl: './about-me.component.css'
 })
 export class AboutMEComponent implements OnInit  {
-
+  age = new Date().getFullYear() - 1998;
   ngOnInit() {
     AOS.init(); // Inicializar AOS
   }
