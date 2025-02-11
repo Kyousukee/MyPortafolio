@@ -14,3 +14,30 @@ h2 {
 .custom-progress-bar {
   background-color: #3d00b6;
 }
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #212529; /* Fondo oscuro */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.tech-badge img {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.tech-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
