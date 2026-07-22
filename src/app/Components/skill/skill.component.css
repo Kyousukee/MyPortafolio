@@ -101,6 +101,24 @@
   font-size: 0.85rem;
 }
 
+.ai-opencode {
+  gap: 8px;
+}
+
+.oc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #8b5cf6, #6c3ce0);
+  border-radius: 4px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
 .progress-bar {
   background: var(--gradient-primary) !important;
 }
