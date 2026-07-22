@@ -1,3 +1,123 @@
-a{
-  font-size: 20px;
+nav {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  padding: 0.8rem 0;
+}
+
+nav.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom-color: rgba(108, 60, 224, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #f1f5f9 !important;
+  letter-spacing: -0.02em;
+}
+
+.nav-link {
+  color: #94a3b8 !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 0 2px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f1f5f9 !important;
+  background: rgba(108, 60, 224, 0.15);
+}
+
+.nav-link i {
+  margin-right: 4px;
+  font-size: 0.85rem;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(108, 60, 224, 0.3);
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(108, 60, 224, 0.1);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(108, 60, 224, 0.3);
+}
+
+.toggler-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #f1f5f9;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.toggler-bar::before,
+.toggler-bar::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.toggler-bar::before { top: -7px; }
+.toggler-bar::after { top: 7px; }
+
+.toggler-bar.active {
+  background: transparent;
+}
+
+.toggler-bar.active::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.toggler-bar.active::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(108, 60, 224, 0.2);
+    border-radius: 0 0 16px 16px;
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    padding: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-radius: 10px;
+  }
 }

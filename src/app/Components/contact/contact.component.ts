@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import emailjs from 'emailjs-com';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -15,15 +15,17 @@ export class ContactComponent {
   };
 
   userId = 'J_oPmzOzmV48ybKDG';
-  serviceId = 'service_uc7wftd';  // Asegúrate de usar tu Service ID de EmailJS
-  templateId = 'template_7ldaive';  // Asegúrate de usar tu Template ID de EmailJS
+  serviceId = 'service_uc7wftd';
+  templateId = 'template_7ldaive';
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  onSubmit() {
+  async onSubmit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    const emailjs = (await import('emailjs-com')).default;
     const { name, email, subject, message } = this.contact;
 
-    // Usando EmailJS para enviar el correo
     emailjs.send(this.serviceId, this.templateId, {
       from_name: name,
       from_email: email,
@@ -33,7 +35,7 @@ export class ContactComponent {
     .then(response => {
       console.log('Correo enviado exitosamente', response);
       alert('Correo enviado con éxito!');
-      this.contact = { name: '', email: '', subject: '', message: '' };  // Limpiar el formulario
+      this.contact = { name: '', email: '', subject: '', message: '' };
     })
     .catch(error => {
       console.error('Error al enviar el correo', error);

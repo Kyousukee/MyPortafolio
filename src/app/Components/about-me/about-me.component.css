@@ -1,36 +1,128 @@
-
-ul {
-  list-style-type: none;
+.about-section {
+  padding: 5rem 0;
+  position: relative;
 }
 
-fa-icon{
-    font-size: 15px;
-    color: #149ddd;
-    width: 30px;
-    height: 30px;
-    background: #dff3fc;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-    margin-right: 10px;
+.section-header {
+  margin-bottom: 3rem;
 }
 
-h3{
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+}
+
+.image-frame::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.5s ease;
+}
+
+.image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.about-role {
+  font-size: 1.5rem;
   font-weight: 700;
-    font-size: 26px;
-    color: #1d0252;
+  margin-bottom: 1rem;
+  color: var(--primary-light);
 }
-h2 {
-  font-size: 24px;
+
+.about-bio {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-bio strong {
+  color: var(--accent);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  border-color: rgba(108, 60, 224, 0.3);
+  background: rgba(108, 60, 224, 0.05);
+}
+
+.info-item i {
+  font-size: 1.2rem;
+  color: var(--primary-light);
+  margin-top: 2px;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
   text-transform: uppercase;
-  color: #303030;
+  letter-spacing: 0.05em;
   font-weight: 600;
-  margin-bottom: 30px;
 }
 
+.info-value {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
 
-a{
-  text-decoration: none;
+a.info-value {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image-frame {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
 }

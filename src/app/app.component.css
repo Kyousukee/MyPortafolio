@@ -1,18 +1,15 @@
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-.fixed-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  z-index: 1000;
 }
 
 .content {
-  padding-top: 60px; /* Ajusta este valor según la altura de tu nav-bar */
-  padding-bottom: 60px; /* Ajusta este valor según la altura de tu footer */
+  padding-top: 70px;
 }
