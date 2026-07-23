@@ -11,6 +11,5 @@ dist
 README.md
 .dockerignore
 Dockerfile
-nginx.conf
 docker-compose.yml
 .DS_Store
