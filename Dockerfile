@@ -21,6 +21,9 @@ FROM nginx:1.27-alpine
 # Remove default nginx config
 RUN rm /etc/nginx/conf.d/default.conf
 
+# Install wget for healthcheck (not in alpine by default)
+RUN apk add --no-cache wget
+
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
